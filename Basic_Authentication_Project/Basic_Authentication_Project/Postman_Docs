@@ -1,0 +1,104 @@
+Postman is a Third party tool, we need to download this one,
+ install it.
+
+ download  from---->>> https://www.getpostman.com/downloads/
+
+Later we will test the our APIs.
+
+We can test the Java APIs , DotNet APIs,.... Not only Djangos APIs.
+
+Postman is always going to check endpoint urls only.
+
+But not checking this endpoint url is developed by which
+ language or not.
+
+
+
+
+Q ) How many ways we are using to Testing the APIs till now ?
+    Using Python Script file ,
+    Using Bowser ,
+    Using Command prompt clients (curl/httpie)
+    Now using Postman
+    Next Swagger.
+
+
+
+
+
+Basic Auth : 2 Draw backs
+=========    ========
+1. Username and pwd will send to the server in base-64
+ encoding format, which is not securied.
+
+--->> our credientials are not going to store in the form of
+cookies. In the form of request only going.
+
+Q).How base-64 becoming un safefull...?
+
+2.we cannot customise look and feel of authentication form.
+
+
+
+
+
+
+
+
+
+
+
+Q) How username and pwd are not secured..?
+I want send the request from command prompt. So what is required
+here..?
+httpie command line module.
+
+c:\Users\Sri> http http://127.0.0.1:8000/api/  --->> enter
+Output as
+{
+  "detail" : "Authentication details were not provided"
+}
+
+Along with this url How you are sending your uname and pwd..?
+Convert your uname and pwd in encripted format on browser.
+url is  http://www.utilities-online.info/base64/
+
+Srinivas:admin123 ---->>> U3Jpbml2YXM6YWRtaW4xMjM=
+This is the encripted code of my uname and pwd.
+
+http://127.0.0.1:3344/api/ "authorization:Basic U3Jpbml2YXM6YWRtaW4xMjM="
+
+Why this base-64 not safe meens..?
+
+If any budy capture this encripted code like U3Jpbml2YXM6YWRtaW4xMjM= ,
+then using this one easily can get my uname and pwd  by decripting
+this value in browser. ---->> in Command prompt.
+
+Now in browser , when you are sending request with uname&pwd then
+automatically encrypted by browser. so no problem.
+
+Now using postman also we can test 2 ways.
+1. By username & pwd sending with request.
+2. By sending encrypted code with request.
+
+
+
+
+Session Auth:
+======  ====
+Djangos in built application is "auth". By using this one we
+can validate the authentication.
+
+SessionAuthentication  class we are using here.
+
+in browser by default you are getting exception msg when you are
+trying to get records.
+
+Output as
+{
+  "detail" : "Authentication details were not provided"
+}
+
+So capture my username & Pwd , one login page should be rewuired.
+
+

@@ -1,0 +1,14 @@
+[
+  {
+    "eno": 10,
+    "ename": "Srinivas",
+    "esal": "100000.00",
+    "eaddr": "Hyderabad"
+  },
+  {
+    "eno": 20,
+    "ename": "Virat",
+    "esal": "20000.00",
+    "eaddr": "Mumbai"
+  }
+]
